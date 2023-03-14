@@ -34,7 +34,7 @@ class Invite(models.Model):
         ('A', 'Accepted'),
         ('R', 'Rejected'),
     )
-    id=None
+    # id=None
     team_id = models.ForeignKey(Team, on_delete=models.CASCADE)
     created_by = models.ForeignKey(get_user_model(), on_delete=models.CASCADE, related_name='invite_created_by')
     invited = models.ForeignKey(get_user_model(), on_delete=models.CASCADE, related_name='invite_invited')
