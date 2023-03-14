@@ -19,7 +19,7 @@ class CustomAccountManager(BaseUserManager):
 
 
         email = self.normalize_email(email)
-        # print(new_user)
+
 
         return self.create_user(email, username, first_name, password, **other_fields)
 
